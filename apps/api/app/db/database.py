@@ -11,7 +11,10 @@ DATABASE_URL = (
     f"{settings.POSTGRES_DB}"
 )
 
-engine = create_engine(DATABASE_URL, pool_pre_ping=True)
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True,
+)
 
 SessionLocal = sessionmaker(
     autocommit=False,
@@ -31,5 +34,7 @@ def get_db():
 
 
 def create_tables():
-    from app.models import User
+    # Import every model so SQLAlchemy registers them
+    import app.models  # noqa: F401
+
     Base.metadata.create_all(bind=engine)
