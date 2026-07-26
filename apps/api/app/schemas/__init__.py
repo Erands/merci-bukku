@@ -5,3 +5,5 @@ from .company import *
 from .product_image import *
 
 from .cart import *
+
+from .order import *
