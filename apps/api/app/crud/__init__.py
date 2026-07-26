@@ -3,3 +3,5 @@ from . import product
 from . import company
 
 from . import product_image
+
+from . import cart
