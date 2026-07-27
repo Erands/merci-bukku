@@ -7,3 +7,7 @@ from .product_image import *
 from .cart import *
 
 from .order import *
+
+from .order_item import *
+
+from .auth import *

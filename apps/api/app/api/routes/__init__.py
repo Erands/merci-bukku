@@ -7,6 +7,8 @@ from .companies import router as companies_router
 from .product_images import router as product_images_router
 from .cart import router as cart_router
 from .orders import router as orders_router
+from .order_items import router as order_items_router
+from .auth import router as auth_router
 
 router = APIRouter()
 
@@ -17,3 +19,5 @@ router.include_router(companies_router)
 router.include_router(product_images_router)
 router.include_router(cart_router)
 router.include_router(orders_router)
+router.include_router(order_items_router)
+router.include_router(auth_router)
